@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UpdateEmployee</title>
+  </head>
+  <body>
+    <button><a href="/employees">Back</a></button>
+
+    <h1>You are updating employee <%=result[0].title%></h1>
+
+    <form action="/update/<%=result[0].id%>" method="post">
+      <div>
+        <label for="">Name</label>
+        <input type="text" name="name" value="<%=result[0].name%>" />
+      </div>
+      <div>
+        <label for="">Position</label>
+        <input type="text" name="position" value="<%=result[0].position%>" />
+      </div>
+      <div>
+        <label for="">$ Salary</label>
+        <input type="text" name="salary" value="<%=result[0].salary%>" />
+      </div>
+
+      <button>submit</button>
+    </form>
+  </body>
+</html>
